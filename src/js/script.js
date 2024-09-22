@@ -54,3 +54,40 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   } else {
     darkToggle.checked = false;
   }
+
+// Show and hide sections
+const showWebDesain = document.getElementById('show-web-desain');
+const showAppDesain = document.getElementById('show-app-desain');
+const webDesain = document.getElementById('web-desain');
+const appDesain = document.getElementById('app-desain');
+
+showWebDesain.addEventListener('click', function(e) {
+  e.preventDefault();
+  webDesain.style.display = 'flex';
+  appDesain.style.display = 'none';
+});
+
+showAppDesain.addEventListener('click', function(e) {
+  e.preventDefault();
+  webDesain.style.display = 'none';
+  appDesain.style.display = 'flex';
+});
+
+// Toggle sections and change button colors
+document.getElementById('show-web-desain').addEventListener('click', function () {
+    document.getElementById('web-desain').style.display = 'flex';
+    document.getElementById('app-desain').style.display = 'none';
+    this.classList.remove('bg-[#007BFF]', 'hover:bg-primary');
+    this.classList.add('bg-primary', 'hover:bg-opacity-80');
+    document.getElementById('show-app-desain').classList.remove('bg-primary', 'hover:bg-opacity-80');
+    document.getElementById('show-app-desain').classList.add('bg-[#007BFF]', 'hover:bg-primary');
+});
+
+document.getElementById('show-app-desain').addEventListener('click', function () {
+    document.getElementById('app-desain').style.display = 'flex';
+    document.getElementById('web-desain').style.display = 'none';
+    this.classList.remove('bg-[#007BFF]', 'hover:bg-primary');
+    this.classList.add('bg-primary', 'hover:bg-opacity-80');
+    document.getElementById('show-web-desain').classList.remove('bg-primary', 'hover:bg-opacity-80');
+    document.getElementById('show-web-desain').classList.add('bg-[#007BFF]', 'hover:bg-primary');
+});
