@@ -936,20 +936,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gradient-to-b {
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-}
-
-.from-\[\#FF007A\] {
-  --tw-gradient-from: #FF007A var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 0 122 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-\[\#990092\] {
-  --tw-gradient-to: #990092 var(--tw-gradient-to-position);
-}
-
 .fill-current {
   fill: currentColor;
 }
@@ -1046,6 +1032,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-2xl {
@@ -1412,6 +1402,10 @@ body {
     width: 66.666667%;
   }
 
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+
   .lg\:max-w-full {
     max-width: 100%;
   }
@@ -1439,6 +1433,10 @@ body {
 
   .lg\:pt-10 {
     padding-top: 2.5rem;
+  }
+
+  .lg\:text-justify {
+    text-align: justify;
   }
 
   .lg\:text-2xl {
